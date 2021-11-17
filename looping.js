@@ -24,7 +24,7 @@ let j = 0;
 // for (let i = 0; i < n; i++) {
 //   console.log(i, n);
 // }
-const scores = [5, 3, 2, 7, 8, 9, 3]; // nilai selama seminggu (0-10)
+const scores = [5, 3, 2, 7, 8, 9, 3, 10]; // nilai selama seminggu (0-10)
 // A > 8
 // B 6 < score <= 8
 // C 4 < score <= 6
