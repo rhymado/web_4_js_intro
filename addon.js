@@ -36,8 +36,9 @@ const getPokemonMoveSet = (pokemon) => {
   const { moves } = pokemon;
   const moveSet = moves.map((moveItem) => {
     // console.log(moveItem);
+    const { move } = moveItem;
     return {
-      move: moveItem.move,
+      move,
     };
   });
   console.log(moveSet);
@@ -75,12 +76,19 @@ const getPokemonTyping = async (pokemonToGet) => {
     const { types } = await response.json();
     // return data.types;
     const typeList = types.map((typeItem) => {
+      const {
+        type: { name },
+      } = typeItem;
+      // const name = typeItem.type.name
       return {
-        name: typeItem.type.name,
+        name, // name: name
       };
+      // return {
+      //   name: typeItem.type.name,
+      // };
     });
     const pokemon = {
-      name: name,
+      name,
       type: typeList,
     };
     console.log(pokemon);
@@ -107,12 +115,15 @@ getPokemonListWithCb(urlPokemon, getPokemonTyping);
 //     const { name, url } = pokemonList[0];
 //     const pokemonTyping = await getPokemonTyping(url);
 //     const typeList = pokemonTyping.map((typeItem) => {
+//       const {
+//         type: { name },
+//       } = typeItem;
 //       return {
-//         name: typeItem.type.name,
+//         name,
 //       };
 //     });
 //     const pokemon = {
-//       name: name,
+//       name,
 //       type: typeList,
 //     };
 //     console.log(pokemon);

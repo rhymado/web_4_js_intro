@@ -1,17 +1,23 @@
+const sayHello = function () {
+  console.log("Hello World");
+};
+const getFullNameES5 = function () {
+  return `${this.firstName} ${this.lastName}`;
+};
+// const getFullNameES5WithBind = getFullNameES5.bind(this);
 const user = {
   firstName: "Andi",
   lastName: "Boris",
   age: 20,
-  sayHello: function () {
-    console.log("Hello World");
-  },
+  sayHello,
   addNumber: function (a, b) {
     console.log(a + b);
   },
-  getFullNameES5: function () {
-    // this = object dari method ybs = user
-    return `${this.firstName} ${this.lastName}`;
-  },
+  // getFullNameES5: function () {
+  //   // this = object dari method ybs = user
+  //   return `${this.firstName} ${this.lastName}`;
+  // }
+  getFullNameES5,
   getFullNameES6: () => {
     // this = pembungkus dari object dari method ybs = global
     return `${this.firstName} ${this.lastName}`;
@@ -21,7 +27,8 @@ const user = {
 // user.sayHello();
 // user.addNumber(1, 2);
 const fullName5 = user.getFullNameES5();
-// console.log(fullName5);
+console.log(getFullNameES5());
+console.log(fullName5);
 const fullName6 = user.getFullNameES6();
 // console.log(fullName6);
 

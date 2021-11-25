@@ -40,3 +40,23 @@ console.log(mixed);
 
 let a = null;
 console.log(a);
+
+// shorthand untuk object
+const firstName = "Aang";
+const lastName = "Skywalker";
+const age = 23;
+// transformasi namaProperty: namaValue => namaPropertyDanValue
+const newUser = {
+  ...user,
+  firstName, // firstName: firstName
+  lastName, // lastName: lastName
+  age,
+};
+console.log(newUser);
+
+// const firstName = "Andi";
+// const user2 = {
+//   firstName: "Bagus",
+// };
+// firstName;
+// user2.firstName;
