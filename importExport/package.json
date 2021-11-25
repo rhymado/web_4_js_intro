@@ -1,0 +1,12 @@
+{
+  "name": "import-export",
+  "version": "1.0.0",
+  "description": "",
+  "main": "2.mjs",
+  "scripts": {
+    "start": "node 2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
